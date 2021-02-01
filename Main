@@ -1,0 +1,25 @@
+package com.company;
+import java.util.Scanner;
+import java.util.Random;
+
+public class Main {
+    public static void main(String[] args) {
+
+        Songs song1=new Songs((float)1.2,"a");
+        System.out.println(song1);
+        System.out.println(song1.getPosition());
+        Songs.resetCount();
+        Songs song2=new Songs((float)2.4,"b") ;
+        System.out.println(song2);
+        Songs song3=new Songs((float)2.4,"c") ;
+        Songs song4=new Songs((float)2.4,"d") ;
+        Songs song5=new Songs((float)2.4,"e") ;
+        Songs song6=new Songs((float)2.4,"f") ;
+        Songs song7=new Songs((float)2.4,"g") ;
+        Songs song8=new Songs((float)2.4,"h") ;
+        Songs song9=new Songs((float)2.4,"i") ;
+        Songs song10=new Songs((float)2.4,"j") ;
+        Songs.PrintString();
+
+    }
+}
