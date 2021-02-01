@@ -1,0 +1,57 @@
+package com.company;
+import java.time.Year;
+import java.util.Date;
+
+
+public class Songs {
+
+    public final Date releaseDate;
+    public final String songName;
+    public float rating;
+    public static int songCounter=0;
+    public final int songNumber;
+    public static final int goldStandard=1000;
+    public boolean afterGold;
+
+    public static String [] str=new String[10];
+
+    public Songs(float rating,String songName) {
+        this.releaseDate=new Date();
+        this.songName= songName;
+        this.rating = rating;
+        this.songNumber=songCounter;
+        ++songCounter;
+        if(goldStandard==1000)
+            this.afterGold = true;
+        else
+            this.afterGold =false;
+        if(songNumber<11)
+            str[songNumber]=songName;
+    }
+
+    public static void PrintString()
+    {
+        for(int i=0;i< str.length;i++)
+            System.out.println(str[i]);
+    }
+    public static void resetCount()
+    {
+        songCounter=1;
+    }
+
+    public float getPosition()
+    {
+        return (float)songNumber/songCounter;
+    }
+
+    @Override
+    public String toString() {
+        return "Songs{" +
+                "releaseDate=" + releaseDate +
+                ", songName='" + songName + '\'' +
+                ", rating=" + rating +
+                ", songNumber=" + songNumber +
+                ", afterGold=" + afterGold +
+                '}';
+    }
+}
